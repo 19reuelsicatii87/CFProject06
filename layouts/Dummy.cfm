@@ -88,7 +88,7 @@
 												class ="dropdown-item"
 												target="_blank"
 											>
-												<i class="bi bi-bug"></i> Report a Bug - test
+												<i class="bi bi-bug"></i> Report a Bug - test02
 											</a>
 										</li>
 										<li>
