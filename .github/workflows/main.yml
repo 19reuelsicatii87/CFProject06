@@ -5,7 +5,7 @@ on:
     types: [closed]
 
 env:
-  KEY_HEADER: "X-API-KEY: <API_KEY>"
+  KEY_HEADER: "X-API-KEY: UPiPjjmx9g91x7ZVGrpGS5AjO6Ir1IcB5fcTlSEt"
   PAYLOAD: '{ "gitHub": { "owner": "reuelsicatii", "repo": "semify","sha": "${{ github.event.pull_request.head.sha }}" } }'
   
 jobs:
