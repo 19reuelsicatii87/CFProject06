@@ -1,0 +1,8 @@
+{
+    "name":"CFProject06",
+    "web":{
+        "rewrites":{
+            "enable":"true"
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.headline-gold {
+    font-size: 85px;
+    color: #B8860B;
+
+}
+
+.background-image-stripe {
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: auto;
+    background-image: url("https://voge.s3.ap-southeast-1.amazonaws.com/images/app/Backdrop+VOGE.png");
+
+}

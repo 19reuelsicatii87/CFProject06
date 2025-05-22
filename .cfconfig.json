@@ -1,0 +1,60 @@
+{
+	"cacheDefaultObject":"coldbox",
+    "debuggingEnabled":true,
+    "debuggingReportExecutionTimes":false,
+    "disableInternalCFJavaComponents":false,
+	"requestTimeoutEnabled":true,
+	"requestTimeout":"0,0,5,0",
+	"robustExceptionEnabled":true,
+    "caches":{
+		"coldbox":{
+			"storage":"true",
+            "type":"RAM",
+            "custom":{
+				"timeToIdleSeconds":"1800",
+                "timeToLiveSeconds":"3600"
+            },
+            "class":"lucee.runtime.cache.ram.RamCache",
+            "readOnly":"false"
+        }
+    },
+	"datasources" : {
+		"localdbjson":{
+			"host":"${DB_HOST:127.0.0.1}",
+			"port":"${DB_PORT:3306}",
+			"database":"mysql",
+			"dbdriver":"${DB_DRIVER:MySQL}",
+			"class":"${DB_CLASS}",
+			"bundleName": "${DB_BUNDLENAME}",
+			"bundleVersion": "${DB_BUNDLEVERSION}",	
+			"connectionString:":"${DB_CONNECTIONSTRING}",		
+			"username":"${DB_USER:root}",
+			"password":"${DB_PASSWORD}"
+		},
+		"localdbjsoncontacts":{
+			"host":"${DB_HOST:127.0.0.1}",
+			"port":"${DB_PORT:3306}",
+			"database":"mysql",
+			"dbdriver":"${DB_DRIVER:MySQL}",
+			"class":"${DB_CLASS}",
+			"bundleName": "${DB_BUNDLENAME}",
+			"bundleVersion": "${DB_BUNDLEVERSION}",	
+			"connectionString:":"${DB_CONNECTIONSTRING}",		
+			"username":"${DB_USER:root}",
+			"password":"${DB_PASSWORD}"
+		},
+		"localdbvoge":{
+			"host":"${DB_HOST:127.0.0.1}",
+			"port":"${DB_PORT:3306}",
+			"database":"voge",
+			"dbdriver":"${DB_DRIVER:MySQL}",
+			"class":"${DB_CLASS}",
+			"bundleName": "${DB_BUNDLENAME}",
+			"bundleVersion": "${DB_BUNDLEVERSION}",	
+			"connectionString:":"jdbc:mysql://localhost:3306/voge?characterEncoding=UTF-8&serverTimezone=Asia/Manila&maxReconnects=3",		
+			"username":"${DB_USER:root}",
+			"password":"${DB_PASSWORD}"
+		}
+	},
+	"whitespaceManagement":"white-space-pref"
+}
