@@ -1,0 +1,23 @@
+name: Run API HUB Tests on Merge to Main
+
+on:
+  pull_request:
+    types: [closed]
+
+env:
+  KEY_HEADER: "X-API-KEY: <API_KEY>"
+  PAYLOAD: '{ "gitHub": { "owner": "reuelsicatii", "repo": "semify","sha": "${{ github.event.pull_request.head.sha }}" } }'
+  
+jobs:
+  run-semify-tests:
+    if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'main'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run SEMIFY > Hibu > AUTHORSHIP - GET - /api/lr3tasks/
+        run: |
+          curl -X POST \
+            -H "$KEY_HEADER" \
+            -d "$PAYLOAD" \
+            -s \
+            https://api.reflect.run/v1/suites/semify-hibu-authorship-get-apilr3tasks/executions
