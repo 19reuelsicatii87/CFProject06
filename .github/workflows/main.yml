@@ -4,20 +4,21 @@ on:
   pull_request:
     types: [closed]
 
-env:
-  KEY_HEADER: "X-API-KEY: UPiPjjmx9g91x7ZVGrpGS5AjO6Ir1IcB5fcTlSEt"
-  PAYLOAD: '{ "gitHub": { "owner": "reuelsicatii", "repo": "semify","sha": "${{ github.event.pull_request.head.sha }}" } }'
-  
 jobs:
-  run-semify-tests:
+  run-semea-accounts:
     if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'main'
     runs-on: ubuntu-latest
-
     steps:
-      - name: Run SEMIFY > Hibu > AUTHORSHIP - GET - /api/lr3tasks/
+      - name: Run SEMEA Accounts Test Suite
         run: |
-          curl -X POST \
-            -H "$KEY_HEADER" \
-            -d "$PAYLOAD" \
-            -s \
-            https://api.reflect.run/v1/suites/semify-hibu-authorship-get-apilr3tasks/executions
+          curl -X POST http://test-automation.remote:8080/job/SEMEA_Accounts_TestSuite/build \
+            --user dev-test:11cae3408b48d59a94cde4275b0ecb475a
+
+  run-cas-create-reseller:
+    if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run CAS Create Reseller Test Suite
+        run: |
+          curl -X POST http://test-automation.remote:8080/job/CAS_CreateReseller_TestSuite/build \
+            --user dev-test:11cae3408b48d59a94cde4275b0ecb475a
