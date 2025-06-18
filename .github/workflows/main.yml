@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Run SEMEA Accounts Test Suite
         run: |
-          curl -X POST http://172.26.10.147:8080/job/SEMEA_Accounts_TestSuite/build \
+          curl -X POST https://1be1-2600-1f18-76fb-4f00-579b-2f9f-19d-e5fb.ngrok-free.app/job/SEMEA_Accounts_TestSuite/build \
             --user dev-test:11cae3408b48d59a94cde4275b0ecb475a
 
   run-cas-create-reseller:
@@ -20,5 +20,5 @@ jobs:
     steps:
       - name: Run CAS Create Reseller Test Suite
         run: |
-          curl -X POST http://172.26.10.147:8080/job/CAS_CreateReseller_TestSuite/build \
+          curl -X POST https://1be1-2600-1f18-76fb-4f00-579b-2f9f-19d-e5fb.ngrok-free.app/job/CAS_CreateReseller_TestSuite/build \
             --user dev-test:11cae3408b48d59a94cde4275b0ecb475a
