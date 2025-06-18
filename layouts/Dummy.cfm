@@ -46,7 +46,7 @@
 					<div class="container-fluid">
 						<!--- Brand --->
 						<a class="navbar-brand" href="#event.buildLink( "main" )#">
-							<strong>Welcome - test04</strong>
+							<strong>Welcome - test03</strong>
 						</a>
 
 						<!--- Mobile Toggler --->
